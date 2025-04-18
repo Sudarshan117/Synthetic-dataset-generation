@@ -1,0 +1,92 @@
+# YAML Configuration for Synthetic Data Pipeline
+datasets:
+  # Dataset Configuration
+  debates:
+    type: file
+    path: "adult.csv"  
+    target_column: "income"  
+    columns:
+      - age
+      - workclass
+      - education
+      - marital-status
+      - occupation
+      - relationship
+      - race
+      - sex
+      - capital-gain
+      - capital-loss
+      - hours-per-week
+      - native-country
+      - income
+
+default_model: gpt-4-turbo  # Default model for synthetic data generation
+temporary_dir: "temp"       # Temporary directory for intermediate results
+output_dir: "output"       
+filter_key: ""              
+
+# Operations Configuration
+operations:
+  - name: summarize
+    description: Summarize key statistics and structure of the dataset
+    operator: summarize
+    prompt: |
+      Summarize the dataset for key attributes such as age distribution, 
+      most common values in categorical columns, and patterns in the target column.
+
+  - name: fit
+    description: Train a synthetic data generation model
+    model: ctgan 
+    operator: synthesize
+    prompt: |
+      Train a synthetic data generation model based on the given dataset:
+      {{ input }}
+
+  - name: generate
+    description: Generate synthetic table data
+    operator: synthesize
+    rows: 500  
+    prompt: |
+      Generate a synthetic dataset with {{ rows }} rows while preserving 
+      the statistical properties and distributions of the input dataset.
+
+    output:
+      type: table
+      path: "{{ output_dir }}/synthetic_data.csv"
+
+  - name: evaluate
+    description: Compare real and synthetic datasets
+    operator: evaluate
+    prompt: |
+      Compare the real dataset and the generated synthetic dataset using 
+      metrics such as Wasserstein Distance, Chi-Square tests, and visual comparisons.
+
+# Pipeline Steps
+pipeline:
+  steps:
+    - name: summarize_data
+      input: debates
+      operations:
+        - summarize
+
+    - name: train_and_generate_synthetic_data
+      input: debates
+      operations:
+        - fit
+        - generate
+
+    - name: evaluate_synthetic_data
+      input: debates
+      operations:
+        - evaluate
+
+# Output Configuration
+output:
+  type: file
+  path: "{{ output_dir }}/synthetic_table.json" 
+  intermediate_dir: "checkpoints" 
+
+# Logging and Metadata
+logging:
+  level: INFO 
+  save_path: "{{ output_dir }}/logs/pipeline.log"
