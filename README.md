@@ -1,41 +1,44 @@
-Synthetic Data Generation Pipeline
+**Synthetic Data Generation Pipeline**
 
-This project implements a pipeline to generate synthetic data using OpenAI's GPT-4-turbo API. The pipeline includes:
+This project provides a complete pipeline for generating and evaluating synthetic datasets using OpenAI’s GPT-4-turbo API. It covers data preparation, synthetic data creation, and model evaluation.
 
-Data preprocessing and cleaning
-Filtering and sampling rows
-Encoding data into text
-Generating synthetic rows using GPT
-Decoding generated text back into tabular format
-Visualizing and evaluating the data
+**Features**
 
-Requirements
+Preprocessing & Cleaning: Handle raw datasets, filter, and sample rows.
+
+Encoding: Convert tabular data into text prompts.
+
+Synthetic Generation: Use GPT-4-turbo to generate new rows.
+
+Decoding: Transform model outputs back into structured tabular format.
+
+Visualization: Compare real vs. synthetic data distributions.
+
+Evaluation: Assess data quality using ML models.
+
+**⚙️ Requirements**
 
 Python 3.8+
+
 OpenAI API key
-Libraries:
-pandas, numpy, matplotlib, seaborn, scikit-learn, tensorflow, yaml, dotenv
 
-How to Run
-Create a .env file in the project root with your OpenAI API key:
-OPENAI_API_KEY=your_api_key_here
+Dependencies (install via requirements.txt):
+pandas, numpy, matplotlib, seaborn, scikit-learn, tensorflow, yaml, python-dotenv
 
-pip install -r requirements.txt
+ **Outputs**
 
-Execute the Pipeline
-To run the full pipeline:
-python tabetl_pipeline.py
+synthetic_data.csv → Generated synthetic dataset
 
-Generate Visualizations
-To compare and visualize real vs. synthetic data:
-python Visualization.py
+visualizations → Comparison plots between real and synthetic distributions
 
-Evaluate machine learning models:
-python ml.py
+model results → Performance metrics from ML evaluation
 
-Outputs
-synthetic_data.csv: The generated synthetic dataset.
 <img width="1365" height="516" alt="image" src="https://github.com/user-attachments/assets/6ea9549a-6a58-4b21-b62e-b04b75c76d5e" />
+
+ **Notes**
+
+This project was developed to explore synthetic data generation and machine learning evaluation using LLMs.
+
 
 
 
