@@ -1,11 +1,11 @@
 
 49,Private,HS-grad,Separated,Adm-clerical,Unmarried,White,Female,0,0,40,USA,<50K
-27,Private,High,Never,Sales,Not,White,Female,0,0,40,USA,<
+27,Private,High,Never,Sales,Not,White,Female,0,0,40,USA,>50K
 30,Private,11th,Never,Cleaner,Not,White,Male,0,0,40,USA,<50K
 19,Private,Some,Single,Other-service,Own-child,White,Male,0,0,30,Mexico,<50K
-41,Local-gov,Bachelors,Married,Craft-repair,Husband,Black,Male,0,0,40,United,<
-37,Self-employed,Bachelors,Divorced,Sales,Not-in-family,White,Female,0,0,60,USA,<
+41,Local-gov,Bachelors,Married,Craft-repair,Husband,Black,Male,0,0,40,United,<50K
+37,Self-employed,Bachelors,Divorced,Sales,Not-in-family,White,Female,0,0,60,USA,>50K
 43,Private,HS-grad,Divorced,Adm-clerical,Not-in-family,White,Female,0,0,40,United,<50K
 56,Private,Assoc-acdm,Married-spouse-absent,Service,Husband,White,Male,0,0,25,Iran,<50K
-31,Private,Bachelors,Separated,Sales,Own-child,Black,Female,0,0,40,USA,<
+31,Private,Bachelors,Separated,Sales,Own-child,Black,Female,0,0,40,USA,<50K
 34,Local-gov,Bachelors,Married,Protective-serv,Husband,White,Male,0,0,40,USA,>50K
