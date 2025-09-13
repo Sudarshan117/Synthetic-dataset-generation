@@ -35,8 +35,8 @@ python ml.py
 
 Outputs
 synthetic_data.csv: The generated synthetic dataset.
-Figures
-Model Performance Metrics: Displayed in the terminal output.
+<img width="1365" height="516" alt="image" src="https://github.com/user-attachments/assets/6ea9549a-6a58-4b21-b62e-b04b75c76d5e" />
+
 
 
 
