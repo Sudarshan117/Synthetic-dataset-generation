@@ -1,4 +1,4 @@
-
+age,	workclass,	education,	marital-status,	occupation,	relationship,	race,	sex,	capital-gain,	capital-loss,	hours-per-week,	native-country,	income
 49,Private,HS-grad,Separated,Adm-clerical,Unmarried,White,Female,0,0,40,USA,<50K
 27,Private,High,Never,Sales,Not,White,Female,0,0,40,USA,>50K
 30,Private,11th,Never,Cleaner,Not,White,Male,0,0,40,USA,<50K
