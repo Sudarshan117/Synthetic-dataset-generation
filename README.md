@@ -27,7 +27,7 @@ pandas, numpy, matplotlib, seaborn, scikit-learn, tensorflow, yaml, python-doten
 
  **Outputs**
 
-synthetic_data.csv → Generated synthetic dataset
+synthetic_data.csv, synthetic_data1.csv and synthetic_data2.csv → Generated synthetic datasets
 
 visualizations → Comparison plots between real and synthetic distributions
 
